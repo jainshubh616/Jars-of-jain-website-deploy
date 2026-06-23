@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jars of Jain | Traditional Indian Snacks & Spices</title>
+    <meta name="description" content="Handcrafted Indian snacks like Gol Mathri, kela Namkeen, Mathri, Jiravan">
+    <!-- Improvement #13: Preload hero image -->
+    <link rel="preload" as="image" href="images/hero.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <span class="loader__text">Jars of Jain</span>
+        <div class="loader__bar"></div>
+    </div>
+
+
+
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Improvement #9: Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#our-roots" class="mobile-menu__link">Our Roots</a>
+        <a href="#reviews" class="mobile-menu__link">Customer Stories</a>
+        <a href="#origin" class="mobile-menu__link">Our Jars</a>
+        <a href="#process" class="mobile-menu__link">Epilogue</a>
+        <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20explore%20your%20artisanal%20collection."
+            class="mobile-menu__cta">Order via WhatsApp</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="navbar__logo">Jars of Jain
+        </a>
+        <div class="navbar__links">
+            <a href="#hero" class="navbar__link">Home</a>
+            <a href="#origin" class="navbar__link">Our Jars</a>
+            <a href="#reviews" class="navbar__link">CUSTOMER STORIES</a>
+            <a href="#process" class="navbar__link">Process</a>
+            <a href="#our-roots" class="navbar__link">Our Roots</a>
+
+            <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20explore%20your%20artisanal%20collection."
+                class="navbar__cta magnetic-btn">Order via WhatsApp</a>
+        </div>
+        <div class="navbar__hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero__media">
+            <img src="images/Herophoto2.png" alt="Artisan preserves and spices arranged on dark walnut wood">
+        </div>
+        <div class="hero__vignette"></div>
+        <div class="hero__gradient"></div>
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span class="hero__badge-line"></span>
+                Since 2005
+                <span class="hero__badge-line"></span>
+            </div>
+            <!-- Improvement #2: Title will be split into chars via JS -->
+            <h1 class="hero__title" id="heroTitle">
+                Taste The Tradition
+                <em>Premium Traditional Indian Snacks & Spices</em>
+            </h1>
+            <p class="hero__subtitle">
+                "Every jar holds a memory from grandmother's pantry, hand-sealed with the quiet devotion of a thousand
+                Sunday afternoons."
+            </p>
+            <!-- Improvement #4: Hero CTA Button -->
+            <a href="#origin" class="btn-hero-cta magnetic-btn" id="heroCta">
+                Explore the Jars
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+        <div class="hero__scroll">
+            <span class="hero__scroll-text"></span>
+            <span class="hero__scroll-line"></span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee__track">
+            <span class="marquee__item">Purely Natural <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Small Batch Artisan <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Family Recipes <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Heirloom Techniques <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Hand Ground Spices <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Sun-Dried Preserves <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Cold-Pressed Oils <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Heritage Driven <span class="marquee__dot"></span></span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee__item">Purely Natural <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Small Batch Artisan <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Family Recipes <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Heirloom Techniques <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Hand Ground Spices <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Sun-Dried Preserves <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Cold-Pressed Oils <span class="marquee__dot"></span></span>
+            <span class="marquee__item">Heritage Driven <span class="marquee__dot"></span></span>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════
+         TRUST BLOCK
+         ═══════════════════════════════════════════ -->
+    <div class="trust-bar">
+        <div class="trust-item"><span class="icon">🌿</span> 100% Natural</div>
+        <div class="trust-item"><span class="icon">✨</span> Heritage Recipes</div>
+        <div class="trust-item"><span class="icon">👨‍👩‍👧</span> 5000+ Happy Families</div>
+        <div class="trust-item"><span class="icon">📜</span> FSSAI Certified</div>
+    </div>
+    <!-- ═══════════════════════════════════════════
+         CHAPTER I — THE ORIGIN STORY
+         ═══════════════════════════════════════════ -->
+    <section class="origin" id="origin">
+        <div class="origin__grid">
+            <div class="origin__text-column" style="position: relative;">
+                <div class="origin__watermark reveal">I</div>
+                <div class="origin__chapter-marker reveal">
+                    <span class="origin__chapter-line"></span>
+                    JAR I
+                </div>
+                <h2 class="origin__title reveal" style="transition-delay: 0.1s">
+                    <span>Kela</span>
+                    Namkeen<br>
+                </h2>
+                <p class="origin__text reveal" style="transition-delay: 0.2s">
+                    Crispy. Flavorful. Addictive.<br>
+                    A crunchy, savory snack made from raw banana slices, seasoned with a secret blend of spices.
+                    Some flavors don’t come from recipes — they come from memories.
+                    At Jars of Jain, our Kela Namkeen is crafted the traditional way, using slow roasting and
+                    time-honored techniques passed through generations.
+                    Every bite carries the warmth of home, the richness of tradition, and a taste that stays with you.
+                </p>
+                <p class="origin__text reveal" style="transition-delay: 0.3s">
+                    At Jars of Jain, we haven't changed a single note of that melody. We use the same heirloom
+                    techniques, the same slow-roasting, and the same patience that defines a generational bond.
+                </p>
+            </div>
+            <div class="origin__image-wrapper reveal-right">
+                <div class="origin__image-frame">
+                    <img src="images/Kela-Namkeen1.png" alt="Artisanal Kela Namkeen in a glass jar">
+                    <div class="origin__image-border"></div>
+                </div>
+                <div class="origin__product-card">
+                    <h3>Kela Namkeen</h3>
+                    <div class="product-rating" data-product="Kela Namkeen">
+                        <span class="stars">★★★★★</span> <span class="rating-score">--</span> <span class="review-count">(0 Stories)</span>
+                    </div>
+                    <div class="limited-batch">LIMITED BATCH • ORDER FRESH</div>
+                    <div>
+                        <span class="price-weight">100g</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-old">₹249</span>
+                        <span class="price-new">₹199</span>
+                        <span class="price-badge">Save 20%</span>
+                    </div>
+                    
+                    <p>“Made the traditional way with crispy banana Namkeen, perfectly salted and spiced for everyday
+                        Snacking”</p>
+                    <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20order%20the%20Kela%20Namkeen%20at%20the%20offer%20price%20of%20%E2%82%B9199."
+                        class="card-cta">
+                        Buy Your Jar
+                        <span class="material-symbols-outlined" style="font-size: 0.85rem;">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornament Divider -->
+    <div class="ornament-divider reveal">
+        <span class="ornament-divider__line"></span>
+        <span class="ornament-divider__diamond"></span>
+        <span class="ornament-divider__line"></span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CHAPTER II — GOL MATHRI
+         ═══════════════════════════════════════════ -->
+    <section class="origin" id="craft">
+        <div class="origin__grid">
+            <div class="origin__text-column" style="position: relative;">
+                <div class="origin__watermark reveal">II</div>
+                <div class="origin__chapter-marker reveal">
+                    <span class="origin__chapter-line"></span>
+                    JAR II
+                </div>
+                <h2 class="origin__title reveal" style="transition-delay: 0.1s">
+                    <span>Gol</span>
+                    Mathri<br>
+                </h2>
+                <p class="origin__text reveal" style="transition-delay: 0.2s">
+                    Hand-rolled and slow-fried the traditional way, our Gol Mathri is crisp, flaky, and that familiar
+                    crunch we've all grown up loving.
+                    Made with simple ingredients and time-honored techniques, it's the kind of snack that brings you
+                    back
+                    home.
+                </p>
+                <p class="origin__text reveal" style="transition-delay: 0.3s">
+                    A timeless snack made for everyday moments. Each piece is carefully shaped by hand, preserving the
+                    authenticity that makes it truly special.
+                </p>
+            </div>
+            <div class="origin__image-wrapper reveal-right">
+                <div class="origin__image-frame">
+                    <img src="images/Gol_mathri1.png" alt="Freshly prepared Gol Mathri">
+                    <div class="origin__image-border"></div>
+                </div>
+                <div class="origin__product-card">
+                    <h3>Gol Mathri</h3>
+                    <div class="product-rating" data-product="Gol Mathri">
+                        <span class="stars">★★★★★</span> <span class="rating-score">--</span> <span class="review-count">(0 Review)</span>
+                    </div>
+                    <div class="limited-batch">LIMITED BATCH • ORDER FRESH</div>
+                    <div>
+                        <span class="price-weight">100g</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-old">₹299</span>
+                        <span class="price-new">₹229</span>
+                        <span class="price-badge">Save 23%</span>
+                    </div>
+                    <p>"Hand-rolled and slow-fried, crisp, flaky, and full of that familiar crunch we've all grown up
+                        loving"</p>
+                    <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20order%20the%20Gol%20Mathri%20at%20the%20offer%20price%20of%20%E2%82%B9229."
+                        class="card-cta">
+                        Buy Your Jar
+                        <span class="material-symbols-outlined" style="font-size: 0.85rem;">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornament Divider -->
+    <div class="ornament-divider reveal">
+        <span class="ornament-divider__line"></span>
+        <span class="ornament-divider__diamond"></span>
+        <span class="ornament-divider__line"></span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CHAPTER III — MATHRI
+         ═══════════════════════════════════════════ -->
+    <section class="origin" id="collection">
+        <div class="origin__grid">
+            <div class="origin__text-column" style="position: relative;">
+                <div class="origin__watermark reveal">III</div>
+                <div class="origin__chapter-marker reveal">
+                    <span class="origin__chapter-line"></span>
+                    JAR III
+                </div>
+                <h2 class="origin__title reveal" style="transition-delay: 0.1s">
+                    <span>Mathri</span>
+                    <br>
+                </h2>
+                <p class="origin__text reveal" style="transition-delay: 0.2s">
+                    The heart of every meal. A complex, aromatic blend of cloves, cinnamon, and sun-kissed chillies.
+                    Roasted and hand-ground to release essential oils that industrial grinders would burn.
+                </p>
+                <p class="origin__text reveal" style="transition-delay: 0.3s">
+                    Crafted in India, hand-ground in batches of 20. Each jar carries the heritage of generations
+                    of artisanal craftsmanship.
+                </p>
+            </div>
+            <div class="origin__image-wrapper reveal-right">
+                <div class="origin__image-frame">
+                    <img src="images/Mathri1.png" alt="Freshly prepared Mathri">
+                    <div class="origin__image-border"></div>
+                </div>
+                <div class="origin__product-card">
+                    <h3>Mathri</h3>
+                    <div class="product-rating" data-product="Mathri">
+                        <span class="stars">★★★★★</span> <span class="rating-score">--</span> <span class="review-count">(0 Review)</span>
+                    </div>
+                    <div class="limited-batch">LIMITED BATCH • ORDER FRESH</div>
+                    <div>
+                        <span class="price-weight">100g</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-old">₹349</span>
+                        <span class="price-new">₹249</span>
+                        <span class="price-badge">Save 28%</span>
+                    </div>
+                    <p>"A timeless classic, hand-crafted with love — crisp, flaky, and seasoned to perfection"</p>
+                    <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20order%20the%20classic%20Mathri%20at%20the%20offer%20price%20of%20%E2%82%B9249."
+                        class="card-cta">
+                        Buy Your Jar
+                        <span class="material-symbols-outlined" style="font-size: 0.85rem;">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornament Divider -->
+    <div class="ornament-divider reveal">
+        <span class="ornament-divider__line"></span>
+        <span class="ornament-divider__diamond"></span>
+        <span class="ornament-divider__line"></span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CHAPTER IV — JIRAVAN
+         ═══════════════════════════════════════════ -->
+    <section class="origin" id="jar4">
+        <div class="origin__grid">
+            <div class="origin__text-column" style="position: relative;">
+                <div class="origin__watermark reveal">IV</div>
+                <div class="origin__chapter-marker reveal">
+                    <span class="origin__chapter-line"></span>
+                    JAR IV
+                </div>
+                <h2 class="origin__title reveal" style="transition-delay: 0.1s">
+                    <span>Jiravan</span>
+                    <br>
+                </h2>
+                <p class="origin__text reveal" style="transition-delay: 0.2s">
+                    A signature spice blend passed down through generations. Our Jiravan is a fragrant mix of cumin,
+                    coriander, and hand-selected spices — slow-roasted and stone-ground to preserve every note of
+                    flavor.
+                </p>
+                <p class="origin__text reveal" style="transition-delay: 0.3s">
+                    Sprinkle it over chaat, dal, or your favourite snacks — Jiravan transforms every dish into a
+                    celebration of authentic taste. Made the way it was always meant to be.
+                </p>
+            </div>
+            <div class="origin__image-wrapper reveal-right">
+                <div class="origin__image-frame">
+                    <img src="images/hero.png" alt="Artisanal Jiravan spice blend">
+                    <div class="origin__image-border"></div>
+                </div>
+                <div class="origin__product-card">
+                    <h3>Jiravan</h3>
+                    <div class="product-rating" data-product="Jiravan">
+                        <span class="stars">★★★★★</span> <span class="rating-score">--</span> <span class="review-count">(0 Review)</span>
+                    </div>
+                    <div class="limited-batch">LIMITED BATCH • ORDER FRESH</div>
+                    <div>
+                        <span class="price-weight">100g</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-old">₹199</span>
+                        <span class="price-new">₹149</span>
+                        <span class="price-badge">Save 25%</span>
+                    </div>
+                    <p>"A heritage spice blend, slow-roasted and stone-ground — the soul of every chaat and snack"</p>
+                    <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20order%20the%20Jiravan%20spice%20blend%20at%20the%20offer%20price%20of%20%E2%82%B9149."
+                        class="card-cta">
+                        Buy Your Jar
+                        <span class="material-symbols-outlined" style="font-size: 0.85rem;">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornament Divider -->
+    <div class="ornament-divider reveal">
+        <span class="ornament-divider__line"></span>
+        <span class="ornament-divider__diamond"></span>
+        <span class="ornament-divider__line"></span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PARALLAX QUOTE
+         ═══════════════════════════════════════════ -->
+    <section class="parallax-quote" id="quote">
+        <div class="parallax-quote__bg" id="parallaxBg">
+            <img src="images/hero.png" alt="Heritage spices and preserves" style="object-position: center 40%;">
+        </div>
+        <div class="parallax-quote__overlay"></div>
+        <div class="parallax-quote__content reveal-scale">
+            <div class="parallax-quote__icon">
+                <span class="material-symbols-outlined" style="font-size: inherit;">format_quote</span>
+            </div>
+            <!-- Improvement #10: Words will be split via JS for scroll-triggered reveal -->
+            <blockquote class="parallax-quote__text" id="quoteText">
+                “Not just snacks, but memories you can taste, A taste that takes you back to simpler, happier days.
+            </blockquote>
+            <div class="parallax-quote__divider"></div>
+            <span class="parallax-quote__author">— Jars Of Jain Family</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHY CHOOSE US
+         ═══════════════════════════════════════════ -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="why-grid">
+            <div class="why-image reveal-left">
+                <img src="images/Herophoto2.png" alt="Jars of Jain products arranged in a traditional rustic setting">
+            </div>
+            <div class="why-content reveal-right">
+                <h2>Why Jars of Jain Feels Different<br><em>Some flavors don't belong in factories.</em></h2>
+                
+                <div class="why-list stagger-children">
+                    <div class="why-item reveal" style="--i: 0">
+                        <div class="why-item-icon"><span class="material-symbols-outlined">favorite</span></div>
+                        <div class="why-item-text">
+                            <h4>The Taste You Remember</h4>
+                            <p>Recipes inspired by traditional homemade flavors that bring back the warmth and nostalgia of childhood.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal" style="--i: 1">
+                        <div class="why-item-icon"><span class="material-symbols-outlined">handyman</span></div>
+                        <div class="why-item-text">
+                            <h4>Small Batch, Better Taste</h4>
+                            <p>Prepared in limited quantities so every batch receives the attention, consistency, and care that mass production cannot deliver.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal" style="--i: 2">
+                        <div class="why-item-icon"><span class="material-symbols-outlined">eco</span></div>
+                        <div class="why-item-text">
+                            <h4>Freshly Prepared</h4>
+                            <p>Unlike products that spend months in storage, our snacks are prepared and packed fresh to preserve flavor and crunch.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal" style="--i: 3">
+                        <div class="why-item-icon"><span class="material-symbols-outlined">family_restroom</span></div>
+                        <div class="why-item-text">
+                            <h4>Made Like Family Food</h4>
+                            <p>Every batch is prepared with the same care and quality standards we would use for our own family.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card reveal">
+                    <h3>Why Customers Choose Jars of Jain</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-pros">
+                            <ul>
+                                <li><span class="material-symbols-outlined">check</span> Small Batch Prepared</li>
+                                <li><span class="material-symbols-outlined">check</span> Freshly Made</li>
+                                <li><span class="material-symbols-outlined">check</span> Traditional Recipes</li>
+                                <li><span class="material-symbols-outlined">check</span> Rich Homemade Taste</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-cons">
+                            <h4>Compared to Typical Packaged Snacks</h4>
+                            <ul>
+                                <li><span class="material-symbols-outlined">close</span> Mass Produced</li>
+                                <li><span class="material-symbols-outlined">close</span> Long Storage Periods</li>
+                                <li><span class="material-symbols-outlined">close</span> Standardized Flavor</li>
+                                <li><span class="material-symbols-outlined">close</span> Factory Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trust-statement reveal">
+                    "The taste you remember. The freshness you've been missing."
+                </div>
+
+                <a href="https://wa.me/919244733168?text=Hi%20Jars%20of%20Jain!%20I%20would%20like%20to%20order." class="btn-hero magnetic-btn reveal">
+                    Order Fresh On WhatsApp
+                    <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MANIFESTO
+         ═══════════════════════════════════════════ -->
+    <section class="manifesto" id="manifesto">
+        <div class="manifesto__watermark">Artisan</div>
+        <div class="manifesto__inner">
+            <div class="manifesto__header reveal">
+                <h2 class="manifesto__title">
+                    Our Heritage <span>Manifesto</span>
+                </h2>
+            </div>
+            <div class="manifesto__grid stagger-children">
+                <div class="manifesto__item reveal" style="--i: 0">
+                    <span class="manifesto__item-number">01</span>
+                    <div class="manifesto__item-line"></div>
+                    <h4>Purely Natural</h4>
+                    <p>No artificial preservatives. No industrial haste. We believe nature provides everything necessary
+                        for the perfect flavor profile.</p>
+                    <div class="manifesto__stat">
+                        <span class="manifesto__stat-value counter" data-target="100" data-suffix="%">0</span>
+                        <span class="manifesto__stat-suffix">Natural</span>
+                    </div>
+                    <div class="manifesto__stat-label">Zero Preservatives</div>
+                </div>
+                <div class="manifesto__item reveal" style="--i: 1">
+                    <span class="manifesto__item-number">02</span>
+                    <div class="manifesto__item-line"></div>
+                    <h4>Family Recipes</h4>
+                    <p>We are the custodians of a lineage. Each blend is exactly as it was served at our family table
+                        fifty years ago.</p>
+                    <div class="manifesto__stat">
+                        <span class="manifesto__stat-value counter" data-target="20" data-suffix="+">0</span>
+                        <span class="manifesto__stat-suffix">Years of Heritage</span>
+                    </div>
+                    <div class="manifesto__stat-label">Since 2005</div>
+                </div>
+                <div class="manifesto__item reveal" style="--i: 2">
+                    <span class="manifesto__item-number">03</span>
+                    <div class="manifesto__item-line"></div>
+                    <h4>Small Batch</h4>
+                    <p>Micro-batches ensure we know every jar by name. Quality is our only metric of success.</p>
+                    <div class="manifesto__stat">
+                        <span class="manifesto__stat-value counter" data-target="20" data-suffix="">0</span>
+                        <span class="manifesto__stat-suffix">Jars per Batch</span>
+                    </div>
+                    <div class="manifesto__stat-label">Hand-Counted Quality</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         REAL CUSTOMER REVIEWS
+         ═══════════════════════════════════════════ -->
+    <!-- ═══════════════════════════════════════════
+         CUSTOMER STORIES (DYNAMIC REVIEWS)
+         ═══════════════════════════════════════════ -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-header reveal">
+            <span class="subtitle">Trusted by Families Across India</span>
+            <h2>Customer Stories</h2>
+        </div>
+
+        <div class="rating-summary-container reveal">
+            <div class="overall-rating">
+                <div class="score" id="overall-score">--</div>
+                <div class="stars" id="overall-stars">★★★★★</div>
+                <div class="total-reviews" id="total-reviews-count">Loading Customer Stories...</div>
+            </div>
+            <div class="rating-bars" id="rating-bars">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+
+        <div class="write-review-btn-container reveal">
+            <button class="btn-write-review" onclick="openReviewModal()">Write your Story</button>
+        </div>
+
+        <div class="reviews-grid stagger-children" id="reviews-grid">
+            <div style="text-align: center; grid-column: 1 / -1; color: var(--color-warm-gray); font-style: italic;">Loading customer stories...</div>
+        </div>
+    </section>
+
+    <!-- Review Submission Modal -->
+    <div class="review-modal-overlay" id="reviewModal">
+        <div class="review-modal" data-lenis-prevent>
+            <button class="close-modal" onclick="closeReviewModal()">×</button>
+            <h2>Share Your Experience</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="reviewName" class="form-control" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number <span style="font-weight: 400; color: var(--color-warm-gray);">(Optional)</span></label>
+                    <input type="tel" id="reviewPhone" class="form-control" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10">
+                    <span style="display: block; margin-top: 0.35rem; font-size: 0.75rem; color: var(--color-warm-gray); font-family: var(--font-sans); line-height: 1.4;">🔔 We'll only use your number to share exclusive offers, new product launches & seasonal specials. No spam, ever.</span>
+                </div>
+                <div class="form-group">
+                    <label>Product</label>
+                    <select id="reviewProduct" class="form-control" required>
+                        <option value="" disabled selected>Select the product you tried</option>
+                        <option value="Mathri">Mathri</option>
+                        <option value="Gol Mathri">Gol Mathri</option>
+                        <option value="Kela Namkeen">Kela Namkeen</option>
+                        <option value="Jiravan">Jiravan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="star-rating-input" id="starSelector">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="reviewRating" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Story</label>
+                    <textarea id="reviewText" class="form-control" required placeholder="Tell us what you loved..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitReviewBtn">Submit Story</button>
+                <div id="reviewMessage" style="margin-top: 1rem; text-align: center; font-family: var(--font-sans); font-size: 0.9rem;"></div>
+            </form>
+        </div>
+    </div>
+
+    <section class="reviews" id="old-reviews" style="display:none;">
+        <h2 class="reviews__title reveal">Voices of <em>Tradition</em></h2>
+        <div class="reviews__grid stagger-children">
+            <div class="review-card reveal" style="--i: 0">
+                <div class="review-quote-icon">“</div>
+                <p class="review-text">"I haven't tasted Mathri this authentic since my grandmother passed away. The
+                    Jiravan spice blend is absolutely incredible. It brings back so many childhood memories."</p>
+                <div class="review-author">
+                    Priya Sharma
+                    <span>Verified Buyer • Mumbai</span>
+                </div>
+            </div>
+            <div class="review-card reveal" style="--i: 1">
+                <div class="review-quote-icon">“</div>
+                <p class="review-text">"The Kela Namkeen is dangerously addictive! You can instantly tell it's made in
+                    fresh, high-quality oil. It feels very light on the stomach. 10/10 highly recommended!"</p>
+                <div class="review-author">
+                    Rahul Mehta
+                    <span>Verified Buyer • Delhi</span>
+                </div>
+            </div>
+            <div class="review-card reveal" style="--i: 2">
+                <div class="review-quote-icon">“</div>
+                <p class="review-text">"Finally a brand that actually delivers on 'preservative-free'. The packaging is
+                    beautiful, but the taste is what will keep me coming back for more. Simply outstanding."</p>
+                <div class="review-author">
+                    Anita Desai
+                    <span>Verified Buyer • Bangalore</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROCESS / EPILOGUE
+         ═══════════════════════════════════════════ -->
+    <section class="process" id="process">
+        <div class="process__inner">
+            <div class="process__header reveal">
+                <h2 class="process__title">Get Freshly Made Snacks In 3 Simple Steps</h2>
+            </div>
+
+            <div class="process__steps">
+                <div class="process__step reveal" style="transition-delay: 0s">
+                    <span class="process__step-number">01</span>
+                    <div class="process__step-content">
+                        <h4>Choose Your Favorites</h4>
+                        <p>Browse our Jars and select the Traditional snacks you want to order.</p>
+                    </div>
+                </div>
+                <div class="process__step reveal" style="transition-delay: 0.15s">
+                    <span class="process__step-number">02</span>
+                    <div class="process__step-content">
+                        <h4>Order On WhatsApp</h4>
+                        <p>Send your selection and details via WhatsApp. It's simple and easy.</p>
+                    </div>
+                </div>
+                <div class="process__step reveal" style="transition-delay: 0.3s">
+                    <span class="process__step-number">03</span>
+                    <div class="process__step-content">
+                        <h4>Freshly Made & Delivered</h4>
+                        <p>Your order is prepared fresh and delivered to your doorstep with care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process__cta reveal" style="transition-delay: 0.45s">
+                <a href="#" class="btn-hero magnetic-btn">
+                    Fresh batches are prepared in limited quantities
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         OUR ROOTS — THE FAMILY STORY
+         ═══════════════════════════════════════════ -->
+    <section class="our-roots" id="our-roots">
+        <!-- Hero intro -->
+        <div class="our-roots__hero">
+            <div class="our-roots__hero-bg"></div>
+            <div class="our-roots__hero-content reveal">
+                <div class="our-roots__badge">
+                    <span class="our-roots__badge-line"></span>
+                    A Family's Legacy
+                    <span class="our-roots__badge-line"></span>
+                </div>
+                <h2 class="our-roots__main-title">
+                    Our Roots
+                    <em>Where every jar begins — with love, legacy & a grandmother's kitchen</em>
+                </h2>
+                <p class="our-roots__intro">
+                    Behind every recipe is a story. Behind every jar is a family. This is ours —
+                    a journey of flavors passed down through generations, sealed with love
+                    and shared with you.
+                </p>
+            </div>
+        </div>
+
+        <!-- Timeline moments -->
+        <div class="our-roots__timeline">
+            <div class="our-roots__moment reveal">
+                <div class="our-roots__moment-content">
+                    <div class="our-roots__moment-year">1970s</div>
+                    <h3 class="our-roots__moment-title">A Grandmother's Kitchen</h3>
+                    <p class="our-roots__moment-text">
+                        It all started in a small kitchen in Bhopal, where our grandmother would
+                        wake before dawn to roast spices on a clay stove. The aroma would fill the
+                        entire neighbourhood — a silent invitation that needed no words. Her hands
+                        knew the perfect pinch, the right moment to stir, the patience to let
+                        flavors bloom.
+                    </p>
+                </div>
+                <div class="our-roots__moment-visual reveal-right">
+                    <img src="images/hero.png" alt="Traditional Indian kitchen with clay stove and brass utensils"
+                        class="our-roots__moment-img">
+                    <div class="our-roots__moment-img-border"></div>
+                </div>
+            </div>
+
+            <div class="our-roots__moment reveal">
+                <div class="our-roots__moment-content">
+                    <div class="our-roots__moment-year">1990s</div>
+                    <h3 class="our-roots__moment-title">Recipes Become Rituals</h3>
+                    <p class="our-roots__moment-text">
+                        As children, we sat cross-legged on the kitchen floor, watching our mother
+                        replicate those same recipes with the same devotion. Festival mornings meant
+                        hand-rolling mathris while sharing stories. Every Sunday meant slow-frying
+                        banana chips until they turned to golden perfection. These weren't just
+                        snacks — they were how our family said "I love you."
+                    </p>
+                </div>
+                <div class="our-roots__moment-visual reveal-left">
+                    <img src="images/Herophoto.png" alt="Family preparing traditional snacks together"
+                        class="our-roots__moment-img">
+                    <div class="our-roots__moment-img-border"></div>
+                </div>
+            </div>
+
+            <div class="our-roots__moment reveal">
+                <div class="our-roots__moment-content">
+                    <div class="our-roots__moment-year">2005</div>
+                    <h3 class="our-roots__moment-title">From Home to Your Home</h3>
+                    <p class="our-roots__moment-text">
+                        When friends and family began asking us to share our homemade treasures,
+                        we realized these flavors deserved to travel beyond our kitchen. Jars of
+                        Jain was born — not as a business, but as a promise: to preserve the
+                        authenticity our grandmother taught us, one small batch at a time. Every
+                        jar we seal carries her blessing.
+                    </p>
+                </div>
+                <div class="our-roots__moment-visual reveal-right">
+                    <img src="images/Kela-Namkeen.png" alt="First batch of Jars of Jain artisan snacks"
+                        class="our-roots__moment-img">
+                    <div class="our-roots__moment-img-border"></div>
+                </div>
+            </div>
+
+            <div class="our-roots__moment reveal">
+                <div class="our-roots__moment-content">
+                    <div class="our-roots__moment-year">Today</div>
+                    <h3 class="our-roots__moment-title">Your Story Meets Ours</h3>
+                    <p class="our-roots__moment-text">
+                        Twenty years later, the kitchen is bigger, but the heart is the same. We
+                        still roast spices by hand. We still count every jar. We still believe
+                        that food made with love tastes different — because it does. When you open
+                        a Jar of Jain, you're not just tasting a snack. You're tasting a family's
+                        love letter to tradition.
+                    </p>
+                </div>
+                <div class="our-roots__moment-visual reveal-left">
+                    <img src="images/Gol_mathri.png" alt="Jars of Jain products today" class="our-roots__moment-img">
+                    <div class="our-roots__moment-img-border"></div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Closing emotional quote -->
+        <div class="our-roots__closing reveal">
+            <blockquote class="our-roots__closing-quote">
+                "We don't just make snacks. We preserve memories. Every jar is a bridge between
+                the kitchen where it all began and the home where it's shared today."
+            </blockquote>
+            <span class="our-roots__closing-author">— The Jain Family</span>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <h2>Jars of Jain</h2>
+                <p>Preserving the soul of the Indian kitchen, one small batch at a time. This is not just food — it is a
+                    ledger of our history.</p>
+            </div>
+            <div>
+                <div class="footer__nav-title">EXPLORE OUR HERITAGE</div>
+                <div class="footer__nav-links">
+                    <a href="#hero">HOME</a>
+                    <a href="#origin">OUR JARS</a>
+                    <a href="Manifesto">OUR MANIFESTO</a>
+                    <a href="#roots">OUR ROOTS</a>
+                    
+                </div>
+            </div>
+            <div>
+                <div class="footer__nav-title">Join the Story</div>
+                <!-- Improvement #12: Real SVG social icons -->
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@jarsofjain.com" class="footer__social-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__copyright">© 2025 Jars of Jain. Written with Heritage.</span>
+            <span class="footer__craft-note">Handcrafted in India</span>
+        </div>
+    </footer>
+
+    <!-- Improvement #3: Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- ═══════════════════════════════════════════
+         JAVASCRIPT
+         ═══════════════════════════════════════════ -->
+    <script src="script.js"></script>
+</body>
+
+</html>
